@@ -1,0 +1,4 @@
+ 
+ {username: bob, password:bobobob, email:bob@bob}  
+ {username: ASD, password:123, email:ASD@A}  
+ {username: 1, password:1, email:1@1} 

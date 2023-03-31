@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("https://c.wallhere.com/photos/cd/34/digital_art_fantasy_art_animals_deer_nature_landscape_trees_water-66620.jpg!d");
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+  display: flex;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}
+/* .main-container {
+    background-image: url("https://c.wallhere.com/photos/cd/34/digital_art_fantasy_art_animals_deer_nature_landscape_trees_water-66620.jpg!d");
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+  } */
+.logo {
+  color: #ffffff;
+  font-weight: 600;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.nav-links a {
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 20px;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 6px;
+  left: 0;
+  bottom: -6px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform.5s;
+}
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.nav-links button {
+  color: #ffffff;
+  font-weight: 600;
+  margin-left: 60px;
+  background: transparent;
+  padding: 5px 15px;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.nav-links button:hover {
+  background: #ffffff;
+  color: darkolivegreen;
+}
+.nav-links li {
+  padding-top: 5px;
+}
+p {
+  color: #ffffff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  line-height: 22px;
+}
+h1 {
+  color: #ffffff;
+}
+h2 {
+  color: blueviolet;
+}
+.form-icon {
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+
+/* Стили для форм */
+
+.wrapper {
+  position: absolute;
+  max-width: 400px;
+  height: 470px;
+  width: 100%;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.wrapper.active {
+  display: flex;
+}
+.wrapper.active.reg {
+  height: 500px;
+}
+.form-box {
+  width: 90%;
+  margin-top: 20px;
+}
+.form-label {
+  font-size: 2em;
+  color: #ffffff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+  border-bottom: 3px solid #333;
+}
+.input-box label {
+  font-size: 1em;
+  color: #162938;
+  font-weight: 500;
+  position: absolute;
+  left: 5%;
+  top: 45%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: 0.5s;
+}
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -10px;
+}
+.input-box .form-icon {
+  position: absolute;
+  right: 8px;
+  margin-top: 10px;
+}
+.remember-form {
+  font-size: 0.9em;
+  display: flex;
+  justify-content: space-between;
+}
+.remember-form input {
+  margin: 0 3px;
+  cursor: pointer;
+  accent-color: #333;
+}
+.remember-form a {
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 600;
+}
+.submit-btn {
+  width: 100%;
+  margin: 15px 0;
+  border: 2px solid #ffffff;
+  background: transparent;
+  padding: 10px;
+  border-radius: 5px;
+  color: #210b36;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background: #ffffff;
+  color: #8a2be2;
+  transition: 0.5s;
+}
+.link-to-reg {
+  margin-left: 50px;
+  text-decoration: none;
+  color: #5a4913;
+  font-weight: 600;
+  cursor: pointer;
+}
+.link-to-log {
+  margin-left: 50px;
+  text-decoration: none;
+  color: #5a4913;
+  font-weight: 600;
+  cursor: pointer;
+}
+.icon-close {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: transparent;
+  border-bottom-left-radius: 20px;
+}
+.icon-close:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.wrapper .login {
+  position: absolute;
+  transform: translateX(-445px);
+  transition: 0.5s;
+}
+.wrapper .login.active {
+  position: absolute;
+  transform: translateX(0);
+  transition: 0.5s;
+}
+.wrapper .register {
+  position: absolute;
+  transform: translateX(445px);
+  transition: 0.5s;
+}
+.wrapper .register.active {
+  position: absolute;
+  transform: translateX(0);
+  transition: 0.5s;
+}
