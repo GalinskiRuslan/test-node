@@ -1,2 +1,2 @@
 # test-node
-проект построен на ноде с библиотекой express с добавлением ejs, body-parser
+проект построен на ноде с библиотекой express с добавлением ejs, body-parser, mongoDb, mongoose
