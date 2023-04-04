@@ -1,4 +1,5 @@
  
  {username: bob, password:bobobob, email:bob@bob}  
  {username: ASD, password:123, email:ASD@A}  
- {username: 1, password:1, email:1@1} 
+ {username: 1, password:1, email:1@1}  
+ {username: Wasya, password:481515147, email:wasya@mail.ru} 

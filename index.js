@@ -2,6 +2,30 @@ const express = require("express");
 const fs = require("fs");
 const app = express();
 const port = 3000;
+/* const { connectToDb, getDb } = require("./db"); */
+/* const { ObjectId } = require("mongodb"); */
+const mongoose = require("mongoose");
+const User = require("./models/users");
+const userRouter = require("./routes/user-routes");
+
+const URL =
+  "mongodb+srv://galinskirus:gal4815162342war@cluster0.abm33bz.mongodb.net/usersbox?retryWrites=true&w=majority";
+
+mongoose
+  .connect(URL, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("connection to mongo"))
+  .catch((err) => console.log(err));
+
+/* let db; */
+
+app.listen(port, (err) =>
+  err ? console.log(err) : console.log(`Example app listening on port ${port}!`)
+);
+
+app.use(express.json());
+app.use(userRouter);
+
+/*  */
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -10,33 +34,3 @@ app.use(express.urlencoded({ extended: false }));
 app.get("/", (req, res) => res.render("index"));
 
 app.get("/about", (req, res) => res.render("about"));
-
-app.get("/user/:name", (req, res) => {
-  res.render("user", { username: req.params.name });
-});
-app.post("/check-user", (req, res) => {
-  fs.readFile("registr-users.txt", (error, data) => {
-    if (data.includes(req.body.email)) {
-      return res.redirect(`/user/${req.body.email}`);
-    } else {
-      return res.redirect("/");
-    }
-  });
-});
-app.post("/user-registr", (req, res) => {
-  fs.readFile("registr-users.txt", (error, data) => {
-    if (data.includes(req.body.email)) {
-      console.log("this email used");
-      return res.redirect("/");
-    } else {
-      console.log("its work!");
-      fs.writeFileSync(
-        "registr-users.txt",
-        `${data} \n {username: ${req.body.username}, password:${req.body.password}, email:${req.body.email}} `
-      );
-      return res.redirect("/about");
-    }
-  });
-});
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));

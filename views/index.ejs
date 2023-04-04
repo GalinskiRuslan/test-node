@@ -11,6 +11,7 @@
     <%- include('components/header') -%>
     <div>
       <h1>Главная страница</h1>
+      <button id="btn1">123</button>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium
         maiores labore ex quidem provident, rerum exercitationem corporis odio
@@ -98,5 +99,10 @@
         sunt perferendis error.
       </p>
     </div>
+    <script>
+      document.getElementById("btn1").addEventListener("click", () => {
+        console.log(123);
+      });
+    </script>
   </body>
 </html>
