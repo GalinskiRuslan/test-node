@@ -20,6 +20,13 @@ const usersSchema = new Schema({
     type: Number,
     required: false,
   },
+  isActivated: {
+    type: Boolean,
+    default: false,
+  },
+  activationLink: {
+    type: String,
+  },
   roles: {
     type: String,
     require: true,

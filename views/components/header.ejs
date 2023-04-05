@@ -21,7 +21,7 @@
       /></svg></span>
   <div class="form-box register">
     <label class="form-label">Registration</label>
-    <form method="post" autocomplete="off" action="/user-registr">
+    <form method="post" autocomplete="off" action="/registration">
       <div class="input-box">
         <span class="form-icon">
           <svg
@@ -68,7 +68,7 @@
   </div>
   <div class="form-box login active">
     <label class="form-label">Login</label>
-    <form method="post" autocomplete="off" action="/check-user">
+    <form id="test" method="get" autocomplete="off" action="/login">
       <div class="input-box">
         <span class="form-icon">
           <svg
@@ -79,7 +79,7 @@
             <path
               d="M424 80H88a56.06 56.06 0 00-56 56v240a56.06 56.06 0 0056 56h336a56.06 56.06 0 0056-56V136a56.06 56.06 0 00-56-56zm-14.18 92.63l-144 112a16 16 0 01-19.64 0l-144-112a16 16 0 1119.64-25.26L256 251.73l134.18-104.36a16 16 0 0119.64 25.26z"
             /></svg></span>
-        <input autocomplete="off" type="email" name="email" required  />
+        <input autocomplete="off" type="email" name="email" required form="test" />
         <label class="form-input__label">Enter you mail</label>
       </div>
       <div class="input-box">
@@ -92,7 +92,7 @@
             <path
               d="M368 192h-16v-80a96 96 0 10-192 0v80h-16a64.07 64.07 0 00-64 64v176a64.07 64.07 0 0064 64h224a64.07 64.07 0 0064-64V256a64.07 64.07 0 00-64-64zm-48 0H192v-80a64 64 0 11128 0z"
             /></svg></span>
-        <input autocomplete="off" type="password" name="password" required />
+        <input autocomplete="off" type="password" name="password" required form="test" />
         <label class="form-input__label">Enter you password</label>
       </div>
       <div class="remember-form">

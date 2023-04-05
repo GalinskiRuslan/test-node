@@ -6,17 +6,21 @@ const {
   addUser,
   updateUser,
   userLogin,
+  registration,
 } = require("../controllers/user-controller");
+const authMiddleware = require("../middleware/authorMiddleweare");
 
 const router = express.Router();
 
 // Mongoose req
-router.get("/users", getUsers);
+router.get("/users", authMiddleware, getUsers);
 router.get("/users/:id", getUser);
 router.delete("/users/:id", deleteUser);
 router.post("/users", addUser);
 router.patch("/users/:id", updateUser);
 router.get("/login", userLogin);
+
+router.post("/registration", registration);
 
 module.exports = router;
 
